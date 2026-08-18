@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>About David Qu | David Qu | Undergrad AI Researcher</title><meta name="author" content="David Qu"><meta name="copyright" content="David Qu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="David Qu is a University of Toronto Computer Science student and AI researcher working on reliable generative AI and medical AI systems.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="About David Qu">
+<meta property="og:url" content="https://davidqu921.github.io/2026/07/30/Who-am-I/index.html">
+<meta property="og:site_name" content="David Qu | Undergrad AI Researcher">
+<meta property="og:description" content="David Qu is a University of Toronto Computer Science student and AI researcher working on reliable generative AI and medical AI systems.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://davidqu921.github.io/img/david.jpg">
+<meta property="article:published_time" content="2026-07-30T14:00:00.000Z">
+<meta property="article:modified_time" content="2026-08-18T04:11:21.971Z">
+<meta property="article:author" content="David Qu">
+<meta property="article:tag" content="Medical AI">
+<meta property="article:tag" content="AI Research">
+<meta property="article:tag" content="University of Toronto">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://davidqu921.github.io/img/david.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "About David Qu",
+  "url": "https://davidqu921.github.io/2026/07/30/Who-am-I/",
+  "image": "https://davidqu921.github.io/img/david.jpg",
+  "datePublished": "2026-07-30T14:00:00.000Z",
+  "dateModified": "2026-08-18T04:11:21.971Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "David Qu",
+      "url": "https://davidqu921.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/personal_web_icon.png"><link rel="canonical" href="https://davidqu921.github.io/2026/07/30/Who-am-I/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'About David Qu',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/trt.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/david.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">9</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/david.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">David Qu | Undergrad AI Researcher</span></a><a class="nav-page-title" href="/"><span class="site-name">About David Qu</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  Back to Home</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page child" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">About David Qu</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2026-07-30T14:00:00.000Z" title="Created 2026-07-30 10:00:00">2026-07-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2026-08-18T04:11:21.971Z" title="Updated 2026-08-18 00:11:21">2026-08-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/About/">About</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="Hello-I’m-David"><a href="#Hello-I’m-David" class="headerlink" title="Hello, I’m David"></a>Hello, I’m David</h1><p>I’m a fourth-year Computer Science student at the University of Toronto Scarborough. My work sits at the intersection of applied AI, reliable generative systems, and healthcare.</p>
+<p>In Summer 2026, I am a <strong>CRA Undergraduate Research Experience (URE) researcher</strong>, focusing on the evaluation and risk management of generative AI. I also work as a <strong>Teaching Assistant at UTSC</strong>. Previously, I spent eight months in Shanghai building and deploying medical imaging models as an AI Algorithm Engineer.</p>
+<h2 id="Experience"><a href="#Experience" class="headerlink" title="Experience"></a>Experience</h2><h3 id="CRA-Undergraduate-Research-Experience-Researcher"><a href="#CRA-Undergraduate-Research-Experience-Researcher" class="headerlink" title="CRA Undergraduate Research Experience Researcher"></a>CRA Undergraduate Research Experience Researcher</h3><p><em>Summer 2026 · University of Toronto Scarborough</em></p>
+<ul>
+<li>Researching methods for evaluating generative AI systems and managing their risks.</li>
+<li>Supported by the Computing Research Association’s Undergraduate Research Experience program.</li>
+</ul>
+<h3 id="Teaching-Assistant"><a href="#Teaching-Assistant" class="headerlink" title="Teaching Assistant"></a>Teaching Assistant</h3><p><em>University of Toronto Scarborough</em></p>
+<ul>
+<li>Support undergraduate Computer Science teaching and student learning.</li>
+<li>Have led course review sessions for more than 100 students.</li>
+</ul>
+<h3 id="AI-Algorithm-Engineer"><a href="#AI-Algorithm-Engineer" class="headerlink" title="AI Algorithm Engineer"></a>AI Algorithm Engineer</h3><p><em>January–August 2025 · Yangtze River Delta Guozhi Intelligent Medical Technology · Shanghai, China</em></p>
+<ul>
+<li>Built medical imaging models for CT organ segmentation, AMD detection, and H&amp;E histology classification.</li>
+<li>Helped deploy AI solutions at Huashan Hospital, affiliated with Fudan University.</li>
+<li>Improved classification Dice scores by 3% with a multi-branch neural network.</li>
+<li>Designed a ViT–CNN hybrid architecture with multi-head self-attention.</li>
+</ul>
+<h3 id="SQL-Database-Developer"><a href="#SQL-Database-Developer" class="headerlink" title="SQL Database Developer"></a>SQL Database Developer</h3><p><em>January–August 2023 · York Region District School Board</em></p>
+<ul>
+<li>Completed more than five projects involving data extraction, processing, and systems integration.</li>
+<li>Worked with Microsoft SQL Server and educational data systems.</li>
+</ul>
+<h2 id="Selected-Research-and-Projects"><a href="#Selected-Research-and-Projects" class="headerlink" title="Selected Research and Projects"></a>Selected Research and Projects</h2><h3 id="Generative-AI-Evaluation-and-Risk-Management"><a href="#Generative-AI-Evaluation-and-Risk-Management" class="headerlink" title="Generative AI Evaluation and Risk Management"></a>Generative AI Evaluation and Risk Management</h3><p>My current research focuses on making generative AI systems more reliable and suitable for real-world deployment.</p>
+<h3 id="Medical-AI-Systems"><a href="#Medical-AI-Systems" class="headerlink" title="Medical AI Systems"></a>Medical AI Systems</h3><p>I have worked on medical image analysis, a rare-disease literature system built with RAG and PubMed data, and a multi-agent rehabilitation workflow using CrewAI, LangChain, and MCP.</p>
+<h3 id="Nuclear-Segmentation-and-Classification"><a href="#Nuclear-Segmentation-and-Classification" class="headerlink" title="Nuclear Segmentation and Classification"></a>Nuclear Segmentation and Classification</h3><p>I contributed to <em>Exploring Architectural Enhancements for HoVer-Net: Deep Learning-based Method of Automated Nuclear Segmentation and Classification</em>.</p>
+<p><a target="_blank" rel="noopener" href="https://doi.org/10.20944/preprints202506.1228.v1">Read the preprint</a> · <a target="_blank" rel="noopener" href="https://orcid.org/0009-0005-6014-0026">View my ORCID</a></p>
+<h2 id="Education-and-Recognition"><a href="#Education-and-Recognition" class="headerlink" title="Education and Recognition"></a>Education and Recognition</h2><ul>
+<li>Computer Science Specialist, University of Toronto Scarborough</li>
+<li>GPA: 3.45&#x2F;4.0</li>
+<li>Dean’s List, 2021–2024</li>
+<li>President’s Scholar, $10,000 scholarship recipient</li>
+<li>Director of Computer Science, AMACSS, 2025–2026</li>
+</ul>
+<h2 id="Skills"><a href="#Skills" class="headerlink" title="Skills"></a>Skills</h2><p><strong>Languages:</strong> Python, SQL, C++, Java, C<br><strong>AI and data:</strong> PyTorch, TensorFlow, OpenCV, Microsoft SQL Server, Milvus<br><strong>Focus areas:</strong> generative AI evaluation, medical image analysis, vision transformers, RAG, AI agents, and MCP</p>
+<h2 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h2><ul>
+<li><a href="mailto:&#x64;&#x61;&#118;&#x69;&#100;&#115;&#122;&#x2e;&#x71;&#117;&#x40;&#x6d;&#97;&#105;&#108;&#x2e;&#x75;&#x74;&#x6f;&#x72;&#x6f;&#110;&#116;&#x6f;&#46;&#99;&#x61;">Email</a></li>
+<li><a target="_blank" rel="noopener" href="https://linkedin.com/in/david-qu-03151124b">LinkedIn</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/davidqu921">GitHub</a></li>
+</ul>
+<p>I’m open to conversations about AI research, reliable generative systems, and healthcare applications.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://davidqu921.github.io">David Qu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://davidqu921.github.io/2026/07/30/Who-am-I/">https://davidqu921.github.io/2026/07/30/Who-am-I/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/medical-ai/">Medical AI</a><a class="post-meta__tags" href="/tags/AI-Research/">AI Research</a><a class="post-meta__tags" href="/tags/uoft/">University of Toronto</a></div><div class="post-share"><div class="social-share" data-image="/img/david.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/08/22/VecMed-MCP/" title="VecMed-MCP - Milvus Vector Database for Medical Data"><img class="cover" src="/img/vecmed.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">Next</div><div class="info-item-2">VecMed-MCP - Milvus Vector Database for Medical Data</div></div><div class="info-2"><div class="info-item-1">VecMed-MCP: Milvus Vector Database for Medical DataOverviewVecMed-MCP is a lightweight framework for building and maintaining a Milvus-based vector database tailored for medical and rare disease research.It provides end-to-end tools for database initialization, data ingestion, semantic search, LLM-driven summarization, and automated updates, enabling researchers to efficiently manage large-scale biomedical literature. Key FeaturesMilvusDB Integration – Ready-to-use Docker setup for fast deplo...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/08/22/Rehab_Flow/" title="Multi-Agent Collaborative Rehabilitation Outpatient Assistance System - Rehab-Flow"><img class="cover" src="/img/rehab_flow.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-22</div><div class="info-item-2">Multi-Agent Collaborative Rehabilitation Outpatient Assistance System - Rehab-Flow</div></div><div class="info-2"><div class="info-item-1"> Disclaimer: While this AI system demonstrates impressive diagnostic capabilities, it’s designed to assist healthcare professionals, not replace your favorite doctor (they still need to pay their student loans! 😄)  🚀 OverviewWelcome to the future of rehabilitation medicine! This cutting-edge system leverages the CrewAI framework to orchestrate multiple intelligent agents that collaborate seamlessly in rehabilitation outpatient care. Think of it as assembling the Avengers, but for medical di...</div></div></div></a><a class="pagination-related" href="/2025/08/22/Co-op-in-Shanghai/" title="Eight Months in Shanghai - Work, Life, and Rethinking Myself"><img class="cover" src="/img/algorithm_team.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-22</div><div class="info-item-2">Eight Months in Shanghai - Work, Life, and Rethinking Myself</div></div><div class="info-2"><div class="info-item-1">Eight Months in Shanghai: Work, Life, and Rethinking MyselfPrologueFrom the first warmth of spring to the suffocating heat of late summer, I spent eight months in Shanghai as an intern. At first, it was supposed to be just another line on my résumé — an ordinary checkpoint in a student’s career. But as the weeks turned into months, the city pressed its rhythm onto me. What I walked away with was not only technical growth, but also a sharper lens through which I now look at youth, ambition, re...</div></div></div></a><a class="pagination-related" href="/2025/08/22/VecMed-MCP/" title="VecMed-MCP - Milvus Vector Database for Medical Data"><img class="cover" src="/img/vecmed.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-22</div><div class="info-item-2">VecMed-MCP - Milvus Vector Database for Medical Data</div></div><div class="info-2"><div class="info-item-1">VecMed-MCP: Milvus Vector Database for Medical DataOverviewVecMed-MCP is a lightweight framework for building and maintaining a Milvus-based vector database tailored for medical and rare disease research.It provides end-to-end tools for database initialization, data ingestion, semantic search, LLM-driven summarization, and automated updates, enabling researchers to efficiently manage large-scale biomedical literature. Key FeaturesMilvusDB Integration – Ready-to-use Docker setup for fast deplo...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/david.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">David Qu</div><div class="author-info-description">4th-year Computer Science student at the University of Toronto, focusing on applied AI and the evaluation of generative systems. Previously worked on medical image analysis and deep learning for healthcare. Interested in building reliable, risk-aware AI for real-world deployment.</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">22</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">9</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/davidqu921" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:davidqu01921@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://www.linkedin.com/in/david-qu-03151124b/" target="_blank" title="LinkedIn"><i class="fab fa-square-linkedin" style="color: #0000FF;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Hello-I%E2%80%99m-David"><span class="toc-number">1.</span> <span class="toc-text">Hello, I’m David</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Experience"><span class="toc-number">1.1.</span> <span class="toc-text">Experience</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CRA-Undergraduate-Research-Experience-Researcher"><span class="toc-number">1.1.1.</span> <span class="toc-text">CRA Undergraduate Research Experience Researcher</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Teaching-Assistant"><span class="toc-number">1.1.2.</span> <span class="toc-text">Teaching Assistant</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AI-Algorithm-Engineer"><span class="toc-number">1.1.3.</span> <span class="toc-text">AI Algorithm Engineer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL-Database-Developer"><span class="toc-number">1.1.4.</span> <span class="toc-text">SQL Database Developer</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Selected-Research-and-Projects"><span class="toc-number">1.2.</span> <span class="toc-text">Selected Research and Projects</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Generative-AI-Evaluation-and-Risk-Management"><span class="toc-number">1.2.1.</span> <span class="toc-text">Generative AI Evaluation and Risk Management</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Medical-AI-Systems"><span class="toc-number">1.2.2.</span> <span class="toc-text">Medical AI Systems</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nuclear-Segmentation-and-Classification"><span class="toc-number">1.2.3.</span> <span class="toc-text">Nuclear Segmentation and Classification</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Education-and-Recognition"><span class="toc-number">1.3.</span> <span class="toc-text">Education and Recognition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Skills"><span class="toc-number">1.4.</span> <span class="toc-text">Skills</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Contact"><span class="toc-number">1.5.</span> <span class="toc-text">Contact</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/07/30/Who-am-I/" title="About David Qu"><img src="/img/david.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="About David Qu"/></a><div class="content"><a class="title" href="/2026/07/30/Who-am-I/" title="About David Qu">About David Qu</a><time datetime="2026-07-30T14:00:00.000Z" title="Created 2026-07-30 10:00:00">2026-07-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/22/Rehab_Flow/" title="Multi-Agent Collaborative Rehabilitation Outpatient Assistance System - Rehab-Flow"><img src="/img/rehab_flow.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Multi-Agent Collaborative Rehabilitation Outpatient Assistance System - Rehab-Flow"/></a><div class="content"><a class="title" href="/2025/08/22/Rehab_Flow/" title="Multi-Agent Collaborative Rehabilitation Outpatient Assistance System - Rehab-Flow">Multi-Agent Collaborative Rehabilitation Outpatient Assistance System - Rehab-Flow</a><time datetime="2025-08-23T03:47:59.000Z" title="Created 2025-08-22 23:47:59">2025-08-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/22/Co-op-in-Shanghai/" title="Eight Months in Shanghai - Work, Life, and Rethinking Myself"><img src="/img/algorithm_team.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Eight Months in Shanghai - Work, Life, and Rethinking Myself"/></a><div class="content"><a class="title" href="/2025/08/22/Co-op-in-Shanghai/" title="Eight Months in Shanghai - Work, Life, and Rethinking Myself">Eight Months in Shanghai - Work, Life, and Rethinking Myself</a><time datetime="2025-08-23T03:47:59.000Z" title="Created 2025-08-22 23:47:59">2025-08-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/22/VecMed-MCP/" title="VecMed-MCP - Milvus Vector Database for Medical Data"><img src="/img/vecmed.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VecMed-MCP - Milvus Vector Database for Medical Data"/></a><div class="content"><a class="title" href="/2025/08/22/VecMed-MCP/" title="VecMed-MCP - Milvus Vector Database for Medical Data">VecMed-MCP - Milvus Vector Database for Medical Data</a><time datetime="2025-08-23T03:47:59.000Z" title="Created 2025-08-22 23:47:59">2025-08-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/06/Paper-Reviewer-Certification-of-IJ-AI/" title="Paper Reviewer Certification of IJ-AI"><img src="/img/Reviewer_Certification.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Paper Reviewer Certification of IJ-AI"/></a><div class="content"><a class="title" href="/2025/08/06/Paper-Reviewer-Certification-of-IJ-AI/" title="Paper Reviewer Certification of IJ-AI">Paper Reviewer Certification of IJ-AI</a><time datetime="2025-08-07T02:16:17.000Z" title="Created 2025-08-06 22:16:17">2025-08-06</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/david.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By David Qu</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
